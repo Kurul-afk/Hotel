@@ -1,7 +1,14 @@
 {
   "type": [],
   "rooms": [],
-  "users": [],
+  "users": [
+    {
+      "email": "arsen",
+      "password": "2323",
+      "confirm_password": "2323",
+      "id": 1
+    }
+  ],
   "favorite": [],
   "commentary": []
 }

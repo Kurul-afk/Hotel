@@ -15,7 +15,7 @@ const Header = () => {
           </Link>
         </div>
         <div className="header__right">
-          <input className="" type="text" placeholder="enter..." />
+          <input className="header__input" type="text" placeholder="enter..." />
           <Link className="header__item" to={"/register"}>
             Register
           </Link>
