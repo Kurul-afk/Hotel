@@ -23,10 +23,28 @@ header {
   text-decoration: none;
   color: #f1efef;
   font-size: 18px;
+  transition: 0.2s;
 }
 .header__input {
   padding: 6px 12px;
   border: none;
   border-radius: 12px;
   outline: none;
+}
+.header__btn_logout {
+  background-color: #fa7d09;
+  color: #2f2519;
+  border: none;
+  border-radius: 15px;
+  padding: 6px 12px;
+  font-size: 16px;
+  transition: 0.2s;
+}
+.header__btn_logout:hover {
+  color: #f1efef;
+}
+.header__current_user {
+  font-size: 16px;
+  color: #f1efef;
+  margin: 0px;
 }

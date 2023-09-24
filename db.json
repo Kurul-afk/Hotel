@@ -7,6 +7,18 @@
       "password": "2323",
       "confirm_password": "2323",
       "id": 1
+    },
+    {
+      "email": "arsen23",
+      "password": "2323",
+      "confirm_password": "2323",
+      "id": 2
+    },
+    {
+      "email": "admin",
+      "password": "admin",
+      "confirm_password": "admin",
+      "id": 3
     }
   ],
   "favorite": [],

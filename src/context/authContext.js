@@ -38,6 +38,7 @@ const AuthContextProvider = ({ children }) => {
         localStorage.setItem("email", JSON.stringify(user.email));
         setCurrentUser(user);
         navigate("/");
+        toast.success("you successfully login");
       } else {
         toast.error("doesn't exist this user!");
       }
@@ -50,10 +51,12 @@ const AuthContextProvider = ({ children }) => {
   };
 
   const handleLogout = (navigate) => {
+    setLoading(true);
     localStorage.removeItem("tokens");
     localStorage.removeItem("email");
     setCurrentUser(null);
     navigate("/login");
+    setLoading(false);
   };
 
   const contextValue = {
