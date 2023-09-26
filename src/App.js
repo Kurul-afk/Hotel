@@ -7,17 +7,20 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import AuthContextProvider from "./context/authContext";
 import "react-toastify/dist/ReactToastify.css";
 import { ToastContainer } from "react-toastify";
+import RoomContextProvider from "./context/roomContext";
 
 const App = () => {
   return (
-    <AuthContextProvider>
-      <ToastContainer />
-      <BrowserRouter>
-        <Header />
-        <Routing />
-        <Footer />
-      </BrowserRouter>
-    </AuthContextProvider>
+    <RoomContextProvider>
+      <AuthContextProvider>
+        <ToastContainer />
+        <BrowserRouter>
+          <Header />
+          <Routing />
+          <Footer />
+        </BrowserRouter>
+      </AuthContextProvider>
+    </RoomContextProvider>
   );
 };
 

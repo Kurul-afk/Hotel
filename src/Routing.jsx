@@ -6,6 +6,10 @@ import DetailPage from "./pages/DetailPage";
 import StatusPage from "./pages/StatusPage";
 import Register from "./components/Register";
 import Login from "./components/Login";
+import AddRoom from "./pages/AddRooms";
+import EditRooms from "./pages/AdminPage";
+import AdminPage from "./pages/AdminPage";
+import EditRoom from "./pages/EditRoom";
 
 const ProtectedRoute = () => {
   const user = localStorage.getItem("email");
@@ -22,6 +26,9 @@ const Routing = () => {
         <Route path="/list-page" element={<ListPage />} />
         <Route path="/detail-page/:id" element={<DetailPage />} />
         <Route path="/status-page" element={<StatusPage />} />
+        <Route path="/add-room" element={<AddRoom />} />
+        <Route path="/admin-page" element={<AdminPage />} />
+        <Route path="/edit-room/:id" element={<EditRoom />} />
       </Route>
     </Routes>
   );

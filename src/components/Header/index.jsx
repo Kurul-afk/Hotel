@@ -5,7 +5,9 @@ import { authContext } from "../../context/authContext";
 
 const Header = () => {
   const [currentUser, setCurrentUser] = useState("");
-  const isAdmin = currentUser === "admin";
+
+  const isAdmin = JSON.parse(localStorage.getItem("email")) === "admin";
+
   const { handleLogout } = useContext(authContext);
 
   const navigate = useNavigate();
@@ -13,7 +15,7 @@ const Header = () => {
   useEffect(() => {
     const user = localStorage.getItem("email");
     setCurrentUser(user);
-  }, []);
+  }, [currentUser]);
 
   return (
     <header>
@@ -25,6 +27,16 @@ const Header = () => {
           <Link className="header__item" to={"/list-page"}>
             Rooms
           </Link>
+          {isAdmin && (
+            <>
+              <Link className="header__item" to={"/add-room"}>
+                Add room
+              </Link>
+              <Link className="header__item" to={"/admin-page"}>
+                Admin list
+              </Link>
+            </>
+          )}
         </div>
         <div className="header__right">
           <input className="header__input" type="text" placeholder="enter..." />

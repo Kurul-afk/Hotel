@@ -1,6 +1,36 @@
 {
-  "type": [],
-  "rooms": [],
+  "categories": [
+    {
+      "category": "1 Star",
+      "id": 1
+    },
+    {
+      "category": "2 Star",
+      "id": 2
+    },
+    {
+      "category": "3 Star",
+      "id": 3
+    },
+    {
+      "category": "4 Star",
+      "id": 4
+    },
+    {
+      "category": "5 Star",
+      "id": 5
+    }
+  ],
+  "rooms": [
+    {
+      "title": "Hawaii245673",
+      "desc": "New room",
+      "price": "244123",
+      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQVRJSe2cT3yYVH6_GAxg9LbAyjOrmhferuMQ&usqp=CAU",
+      "category": "4",
+      "id": 1
+    }
+  ],
   "users": [
     {
       "email": "arsen",
