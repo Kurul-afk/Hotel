@@ -49,6 +49,12 @@
       "password": "admin",
       "confirm_password": "admin",
       "id": 3
+    },
+    {
+      "email": "kamila.gmail.com",
+      "password": "123456",
+      "confirm_password": "123456",
+      "id": 4
     }
   ],
   "favorite": [],

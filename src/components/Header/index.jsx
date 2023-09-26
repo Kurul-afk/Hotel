@@ -6,7 +6,7 @@ import { authContext } from "../../context/authContext";
 const Header = () => {
   const [currentUser, setCurrentUser] = useState("");
 
-  const isAdmin = JSON.parse(localStorage.getItem("email")) === "admin";
+  const isAdmin = localStorage.getItem("email") === "admin";
 
   const { handleLogout } = useContext(authContext);
 
