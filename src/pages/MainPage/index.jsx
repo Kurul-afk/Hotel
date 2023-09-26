@@ -1,7 +1,13 @@
 import React from "react";
+import CustomCarousel from "../../components/CustomCarousel/CustomCarousel";
+import Calendar from "../../components/Calendar/Calendar";
 
-const MainPage = () => {
-  return <div>Main</div>;
-};
-
+function MainPage() {
+  return (
+    <>
+      <CustomCarousel />
+      <Calendar />
+    </>
+  );
+}
 export default MainPage;

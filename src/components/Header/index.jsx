@@ -8,7 +8,7 @@ const Header = () => {
       <div className="header__container">
         <div className="header__left">
           <Link className="header__item " to={"/"}>
-            Hotel Booking
+            Flat Booking
           </Link>
           <Link className="header__item" to={"/list-page"}>
             Rooms
