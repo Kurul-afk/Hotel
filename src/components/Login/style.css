@@ -1,0 +1,69 @@
+.loginForm__container {
+  width: 60%;
+  margin: auto;
+}
+.loginForm__block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.4rem;
+}
+.loginForm__title {
+  font-size: 32px;
+  margin-top: 2.3rem;
+}
+.loginForm__item {
+  position: relative;
+  width: 60%;
+}
+.loginForm__input {
+  width: 100%;
+  padding: 10px 16px;
+  border: 1px solid #352d26;
+  border-radius: 12px;
+  outline: none;
+}
+.loginForm__text {
+  position: absolute;
+  top: -12px;
+  left: 20px;
+  background-color: #fff;
+  padding: 0px 5px;
+}
+.loginForm__btns {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.2rem;
+}
+.loginForm__submit {
+  width: 60%;
+  padding: 6px 12px;
+  border: none;
+  border-radius: 12px;
+  background-color: #4a3f35;
+  color: #fa7d09;
+  transition: 0.2s;
+}
+.loginForm__submit:hover,
+.loginForm__submit:active {
+  background-color: #352d26;
+  color: #df7008;
+}
+.loginForm__link {
+  width: 60%;
+  padding: 6px 12px;
+  border: none;
+  border-radius: 12px;
+  background-color: #fa7d09;
+  text-align: center;
+  text-decoration: none;
+  color: #f1efef;
+  transition: 0.2s;
+}
+.loginForm__link:hover,
+.loginForm__link:active {
+  background-color: #df7008;
+  color: #cac9c9;
+}
