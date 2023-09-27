@@ -1,20 +1,18 @@
 import React, { useContext, useEffect } from "react";
 import { roomContext } from "../../context/roomContext";
 import CustomCard from "../../components/CustomCard";
-import CustomPagination from "../../components/CustomPagination";
-import { useSearchParams } from "react-router-dom";
 
 const AdminPage = () => {
-  const { rooms, getRooms, deleteRoom, pages } = useContext(roomContext);
-  const [searchParams, setSearchParams] = useSearchParams();
+  const { rooms, getRooms, deleteRoom } = useContext(roomContext);
 
   const onDelete = async (id) => {
     await deleteRoom(id);
-    await getRooms(searchParams.get("_page"));
+    await getRooms();
   };
+
   useEffect(() => {
-    getRooms(searchParams.get("_page") || 1);
-  }, [searchParams]);
+    getRooms();
+  }, []);
 
   return (
     <div className="adminList">
@@ -30,7 +28,6 @@ const AdminPage = () => {
             />
           ))}
       </div>
-      <CustomPagination />
     </div>
   );
 };

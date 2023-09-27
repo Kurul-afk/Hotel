@@ -13,7 +13,7 @@ const INIT_STATE = {
   room: null,
 };
 
-const LIMIT = 3;
+const LIMIT = 6;
 
 function reducer(state = INIT_STATE, action) {
   switch (action.type) {
@@ -21,7 +21,6 @@ function reducer(state = INIT_STATE, action) {
       return {
         ...state,
         rooms: action.payload.data,
-        pages: Math.ceil(action.payload.total / LIMIT),
       };
     case "GET_ROOM":
       return {
@@ -54,14 +53,13 @@ const RoomContextProvider = ({ children }) => {
     }
   };
 
-  const getRooms = async (_page, category) => {
+  const getRooms = async () => {
     try {
-      const res = await axios(`${API}/rooms?_limit=${LIMIT}&_page=${_page}`, {
-        params: category ? { category } : null,
-      });
+      const { data } = await axios(`${API}/rooms`);
+      console.log(data);
       dispatch({
         type: "GET_ROOMS",
-        payload: { data: res.data, total: res.headers["x-total-count"] },
+        payload: { data },
       });
     } catch (error) {
       console.log(error);
@@ -124,7 +122,6 @@ const RoomContextProvider = ({ children }) => {
         img: state.img,
         categories: state.categories,
         category: state.category,
-        pages: state.pages,
         getRooms,
         createRoom,
         getRoomById,

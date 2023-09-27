@@ -16,6 +16,7 @@ const Header = () => {
     const user = localStorage.getItem("email");
     setCurrentUser(user);
   }, [currentUser]);
+
   return (
     <header>
       <div className="header__container">

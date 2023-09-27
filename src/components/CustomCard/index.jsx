@@ -2,6 +2,7 @@ import React, { useContext, useEffect } from "react";
 import { roomContext } from "../../context/roomContext";
 import "./style.css";
 import { Link } from "react-router-dom";
+import { Button } from "react-bootstrap";
 
 const CustomCard = ({ room, isAdminStatus, onDelete }) => {
   const { getRooms } = useContext(roomContext);
