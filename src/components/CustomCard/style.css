@@ -1,3 +1,6 @@
 .card__container {
   display: flex;
 }
+.card__img {
+  width: 20%;
+}
