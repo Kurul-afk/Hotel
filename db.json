@@ -1,10 +1,6 @@
 {
   "categories": [
     {
-      "category": "1 Star",
-      "id": 1
-    },
-    {
       "category": "2 Star",
       "id": 2
     },
@@ -23,14 +19,50 @@
   ],
   "rooms": [
     {
+
+      "title": "Luxury Suite with Ocean View",
+      "desc": "Experience the breathtaking views of the ocean from our newly renovated luxury suite.",
+      "price": "$244,123",
+
       "title": "Hawaii245673",
       "desc": "New room",
       "price": "244123sadasd",
+
       "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQVRJSe2cT3yYVH6_GAxg9LbAyjOrmhferuMQ&usqp=CAU",
       "category": "5",
-      "id": 1
+      "id": 
     },
     {
+      "title": "Cozy Double Room",
+      "desc": "A comfortable and cozy double room for a relaxing stay.",
+      "price": "$2,500",
+      "img": "https://i.pinimg.com/474x/2b/7b/cb/2b7bcb250e23df0bae24345b119abfe0.jpg",
+      "category": "3",
+      "id": 2
+    },
+    {
+      "title": "Deluxe King Suite",
+      "desc": "Indulge in the spacious and luxurious Deluxe King Suite for your ultimate comfort.",
+      "price": "$3,000",
+      "img": "https://i.pinimg.com/474x/32/1b/01/321b01282a69c93d6841b532c3ed366e.jpg",
+      "category": "4",
+      "id": 3
+    },
+    {
+      "title": "Economy Room",
+      "desc": "An affordable and convenient option for your stay with all the necessary amenities.",
+      "price": "$1,000",
+      "img": "https://i.pinimg.com/474x/7a/b5/97/7ab597b19b15d52bfba288b8574dc81d.jpg",
+      "category": "4",
+      "id": 4
+    },
+    {
+      "title": "Spacious Family Suite",
+      "desc": "Enjoy a spacious and comfortable family suite for a memorable family vacation.",
+      "price": "$2,800",
+      "img": "https://i.pinimg.com/474x/17/f3/e0/17f3e0543584e532fbc9fcd47e521dd0.jpg",
+      "category": "4",
+      "id": 5
       "title": "asdfghjkl",
       "desc": "asdfhjkl.",
       "price": "asdfhk",
@@ -99,10 +131,31 @@
       "id": 3
     },
     {
+      "email": "kamila.gmail.com",
+      "password": "123456",
+      "confirm_password": "123456",
+      "id": 4
+    },
+    {
+      "email": "kamila",
+      "password": "1212",
+      "confirm_password": "1212",
+      "id": 5
+    },
+    {
+      "email": "admin",
+      "password": "admin",
+      "confirm_password": "admin",
+      "id": 6
+    },
+    {
+      "email": "admin",
+      "password": "admin",
+      "confirm_password": "admin",
+      "id": 7
       "email": "valera",
       "password": "qwerty",
       "confirm_password": "qwerty",
-      "id": 4
     }
   ],
   "favorite": [],

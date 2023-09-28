@@ -20,6 +20,11 @@ const AdminPage = () => {
     await getRooms(searchParams.get("_page"));
   };
 
+
+  useEffect(async () => {
+    await getRooms();
+  }, []);
+
   return (
     <div className="adminList">
       <h1>Admin list</h1>

@@ -20,6 +20,7 @@ const DetailPage = () => {
           <div className="detail__text_container">
             <h2 className="detail__title">{room.title}</h2>
             <p className="detail__desc">{room.desc}</p>
+            <p className="detail__prcie">{room.price}</p>
             <button className="detail__btn">To book</button>
           </div>
         </div>

@@ -2,41 +2,61 @@ import React, { useContext, useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import "./style.css";
 import { authContext } from "../../context/authContext";
+import SearchComponent from "../SearchComponent";
 
 const Header = () => {
   const isAdmin = localStorage.getItem("email") === "admin";
 
+
+  const isAdmin = localStorage.getItem("email") === "kamila";
+
+  const { handleLogout } = useContext(authContext);
+
   const { handleLogout, currentUser, setCurrentUser } = useContext(authContext);
+
 
   const navigate = useNavigate();
 
   useEffect(() => {
     const user = localStorage.getItem("email");
     setCurrentUser(user);
+  }, []);
+
+  const handleSearchChange = (searchText) => {
+    console.log("Search text:", searchText);
+  };
+
   }, [currentUser]);
+
   return (
     <header>
       <div className="header__container">
         <div className="header__left">
-          <Link className="header__item " to={"/"}>
-            Hotel Booking
+          <Link className="header__item" to={"/"}>
+            Flat Booking
           </Link>
-          <Link className="header__item" to={"/list-page"}>
+          <Link className="header__item" to="/list-page">
+            {" "}
+            {/* Исправлена ошибка с className */}
             Rooms
           </Link>
           {isAdmin && (
             <>
-              <Link className="header__item" to={"/add-room"}>
+              <Link className="header__item" to="/add-room">
+                {" "}
+                {/* Исправлена ошибка с className */}
                 Add room
               </Link>
-              <Link className="header__item" to={"/admin-page"}>
+              <Link className="header__item" to="/admin-page">
+                {" "}
+                {/* Исправлена ошибка с className */}
                 Admin list
               </Link>
             </>
           )}
         </div>
         <div className="header__right">
-          <input className="header__input" type="text" placeholder="enter..." />
+          <SearchComponent onSearch={handleSearchChange} />
           {!currentUser ? (
             <Link className="header__item" to={"/register"}>
               Register
@@ -50,7 +70,7 @@ const Header = () => {
             </button>
           )}
           {currentUser ? (
-            <p className="header__current_user">Online:{currentUser}</p>
+            <p className="header__current_user">Online: {currentUser}</p>
           ) : (
             <p className="header__current_user">No user</p>
           )}
