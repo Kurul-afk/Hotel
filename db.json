@@ -25,9 +25,9 @@
     {
       "title": "Hawaii245673",
       "desc": "New room",
-      "price": "244123",
+      "price": "244123sadasd",
       "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQVRJSe2cT3yYVH6_GAxg9LbAyjOrmhferuMQ&usqp=CAU",
-      "category": "4",
+      "category": "5",
       "id": 1
     },
     {
@@ -97,6 +97,12 @@
       "password": "admin",
       "confirm_password": "admin",
       "id": 3
+    },
+    {
+      "email": "valera",
+      "password": "qwerty",
+      "confirm_password": "qwerty",
+      "id": 4
     }
   ],
   "favorite": [],

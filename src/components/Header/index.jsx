@@ -4,11 +4,9 @@ import "./style.css";
 import { authContext } from "../../context/authContext";
 
 const Header = () => {
-  const [currentUser, setCurrentUser] = useState("");
+  const isAdmin = localStorage.getItem("email") === "admin";
 
-  const isAdmin = JSON.parse(localStorage.getItem("email")) === "admin";
-
-  const { handleLogout } = useContext(authContext);
+  const { handleLogout, currentUser, setCurrentUser } = useContext(authContext);
 
   const navigate = useNavigate();
 

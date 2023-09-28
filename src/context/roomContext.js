@@ -55,6 +55,7 @@ const RoomContextProvider = ({ children }) => {
   };
 
   const getRooms = async (_page, category) => {
+    console.log(_page);
     try {
       const res = await axios(`${API}/rooms?_limit=${LIMIT}&_page=${_page}`, {
         params: category ? { category } : null,

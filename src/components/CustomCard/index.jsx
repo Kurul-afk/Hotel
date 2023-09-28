@@ -4,12 +4,6 @@ import "./style.css";
 import { Link } from "react-router-dom";
 
 const CustomCard = ({ room, isAdminStatus, onDelete }) => {
-  const { getRooms } = useContext(roomContext);
-
-  useEffect(() => {
-    getRooms();
-  }, []);
-
   const truncatedText = (text, maxLength) => {
     if (text.length > maxLength) {
       return text.slice(0, maxLength) + "...";
