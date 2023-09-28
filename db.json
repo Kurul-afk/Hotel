@@ -19,12 +19,18 @@
   ],
   "rooms": [
     {
+
       "title": "Luxury Suite with Ocean View",
       "desc": "Experience the breathtaking views of the ocean from our newly renovated luxury suite.",
       "price": "$244,123",
+
+      "title": "Hawaii245673",
+      "desc": "New room",
+      "price": "244123sadasd",
+
       "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQVRJSe2cT3yYVH6_GAxg9LbAyjOrmhferuMQ&usqp=CAU",
-      "category": "4",
-      "id": 1
+      "category": "5",
+      "id": 
     },
     {
       "title": "Cozy Double Room",
@@ -57,6 +63,52 @@
       "img": "https://i.pinimg.com/474x/17/f3/e0/17f3e0543584e532fbc9fcd47e521dd0.jpg",
       "category": "4",
       "id": 5
+      "title": "asdfghjkl",
+      "desc": "asdfhjkl.",
+      "price": "asdfhk",
+      "img": "https://img.freepik.com/free-vector/hotel-room-with-bed-interior-design-background-window-with-curtains-bed-with-pillows-towels-lamp-happy-holiday-vacation-staying-modern-hotel-with-view-city_575670-2063.jpg?w=900&t=st=1695734515~exp=1695735115~hmac=1a354c5cbd553f47c29d678ae16672786b905c5f0272bca04cd0a5c3e2fa4702",
+      "category": "4",
+      "id": 2
+    },
+    {
+      "title": "asdfhjl",
+      "desc": "asdfhjkl",
+      "price": "asdfhjkl",
+      "img": "asdfhjkl",
+      "category": "2",
+      "id": 3
+    },
+    {
+      "title": "Leon banapard",
+      "desc": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Possimus, necessitatibus deserunt. Dolor labore rerum dignissimos. Nobis laborum optio repellendus quasi doloremque quidem maiores dolorem et exercitationem facere numquam rem ex eos perferendis reiciendis sapiente commodi nulla expedita, voluptatibus quae officiis nostrum illo!",
+      "price": "534",
+      "img": "https://www.freepik.com/free-vector/pink-bedroom-interior-with-purple-decor-empty-room_29314749.htm#page=2&query=svg%20background%20hotel&position=39&from_view=search&track=ais",
+      "category": "1",
+      "id": 4
+    },
+    {
+      "title": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus officia veritatis beatae!",
+      "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus officia veritatis beatae!",
+      "price": "423",
+      "img": "https://www.freepik.com/free-vector/pink-bedroom-interior-with-purple-decor-empty-room_29314749.htm#page=2&query=svg%20background%20hotel&position=39&from_view=search&track=ais",
+      "category": "5",
+      "id": 5
+    },
+    {
+      "title": "фыварлдж",
+      "desc": "фыварлэ",
+      "price": "ЫФВАОЛДЖЛРПФЫВПОЛДОВЫФ",
+      "img": "ФЫВАРЛДЖОВЫФ",
+      "category": "5",
+      "id": 6
+    },
+    {
+      "title": "фывапролдждлорпавы",
+      "desc": "фывапрол",
+      "price": "орпавыфыва",
+      "img": "пролопавыф",
+      "category": "3",
+      "id": 7
     }
   ],
   "users": [
@@ -101,6 +153,9 @@
       "password": "admin",
       "confirm_password": "admin",
       "id": 7
+      "email": "valera",
+      "password": "qwerty",
+      "confirm_password": "qwerty",
     }
   ],
   "favorite": [],

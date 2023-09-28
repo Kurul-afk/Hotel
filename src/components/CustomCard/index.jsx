@@ -10,6 +10,7 @@ const CustomCard = ({ room, isAdminStatus, onDelete }) => {
   const [likes, setLikes] = useState(room.likes || 0);
   const [comments, setComments] = useState(room.comments || []);
 
+const CustomCard = ({ room, isAdminStatus, onDelete }) => {
   const truncatedText = (text, maxLength) => {
     if (text.length > maxLength) {
       return text.slice(0, maxLength) + "...";

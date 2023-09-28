@@ -5,11 +5,15 @@ import { authContext } from "../../context/authContext";
 import SearchComponent from "../SearchComponent";
 
 const Header = () => {
-  const [currentUser, setCurrentUser] = useState("");
+  const isAdmin = localStorage.getItem("email") === "admin";
+
 
   const isAdmin = localStorage.getItem("email") === "kamila";
 
   const { handleLogout } = useContext(authContext);
+
+  const { handleLogout, currentUser, setCurrentUser } = useContext(authContext);
+
 
   const navigate = useNavigate();
 
@@ -21,6 +25,8 @@ const Header = () => {
   const handleSearchChange = (searchText) => {
     console.log("Search text:", searchText);
   };
+
+  }, [currentUser]);
 
   return (
     <header>
