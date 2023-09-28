@@ -1,32 +1,32 @@
-// import React, { useEffect, useState } from "react";
-//import axios from 'axios';
+import React, { useContext, useEffect } from "react";
+import { useParams } from "react-router-dom";
+import { roomContext } from "../../context/roomContext";
 
-// import { useParams } from "react-router-dom";
-// const apiUrl = "http://localhost:8000";
+const DetailPage = () => {
+  const { id } = useParams();
 
-// const RoomPage = () => {
-//   const { id } = useParams();
-//   const [roomData, setRoomData] = useState(null);
-//   useEffect(() => {
-//     axios
-//       .get(`/API/rooms/${id}`)
-//       .then((response) => {
-//         setRoomData(response.data);
-//       })
-//       .catch((error) => {
-//         console.error("Ошибка при запросе данных о номере:", error);
-//       });
-//   }, [id]);
+  const { room, getRoomById } = useContext(roomContext);
 
-//   return (
-//     <div className="room-page">
-//       <>
-//         <h2>{roomData.name}</h2>
-//         <p>{roomData.description}</p>
-//         <button>Забронировать</button>
-//       </>
-//     </div>
-//   );
-// };
+  useEffect(() => {
+    getRoomById(id);
+  }, []);
+  if (!room) return <h1>Loading...</h1>;
 
-// export default RoomPage;
+  return (
+    <div className="detail">
+      <div className="detail__container">
+        <img src={room.img} alt="img" className="detail__img" />
+        <div className="detail__text">
+          <div className="detail__text_container">
+            <h2 className="detail__title">{room.title}</h2>
+            <p className="detail__desc">{room.desc}</p>
+            <p className="detail__prcie">{room.price}</p>
+            <button className="detail__btn">To book</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default DetailPage;

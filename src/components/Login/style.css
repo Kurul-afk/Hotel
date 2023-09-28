@@ -1,0 +1,73 @@
+/* Creamy Color Scheme */
+.loginForm {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #f5f5dc; /* Creamy background */
+}
+
+.loginForm__container {
+  background-color: #fff; /* White container */
+  border: 1px solid #e6e6c3; /* Light border */
+  border-radius: 5px;
+  padding: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  width: 300px;
+
+  /* Responsive styles */
+  @media (max-width: 768px) {
+    width: 90%; /* Full width on small screens */
+  }
+}
+
+.loginForm__title {
+  font-size: 1.5rem;
+  margin: 0;
+  padding: 0;
+  color: #68462c; /* Dark brown text */
+}
+
+.loginForm__input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #e6e6c3; /* Light border */
+  border-radius: 5px;
+}
+
+.loginForm__text {
+  font-size: 0.9rem;
+  color: #68462c; /* Dark brown text */
+}
+
+.loginForm__btns {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.loginForm__submit {
+  background-color: #f5f5dc; /* Creamy button background */
+  color: #68462c; /* Dark brown text */
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.loginForm__submit:hover {
+  background-color: #e6e6c3; /* Light brown button background on hover */
+}
+
+.loginForm__link {
+  font-size: 0.9rem;
+  color: #007bff; /* Blue link color */
+  text-decoration: none;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.loginForm__link:hover {
+  color: #0056b3; /* Darker blue on hover */
+}

@@ -1,0 +1,119 @@
+.authForm__container {
+  width: 60%;
+  margin: auto;
+}
+
+.authForm__block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.4rem;
+}
+
+.authForm__title {
+  font-size: 32px;
+  margin-top: 2.3rem;
+  color: #68462c;
+}
+
+.authForm__item {
+  position: relative;
+  width: 60%;
+}
+
+.authForm__input {
+  width: 100%;
+  padding: 10px 16px;
+  border: 1px solid #352d26;
+  border-radius: 12px;
+  outline: none;
+}
+
+.authForm__text {
+  position: absolute;
+  top: -12px;
+  left: 20px;
+  background-color: #fff;
+  padding: 0px 5px;
+}
+
+.authForm__btns {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.2rem;
+}
+
+.authForm__submit {
+  width: 60%;
+  padding: 6px 12px;
+  border: none;
+  border-radius: 12px;
+  background-color: #4a3f35;
+  color: #fa7d09;
+  transition: 0.2s;
+}
+
+.authForm__submit:hover,
+.authForm__submit:active {
+  background-color: #352d26;
+  color: #df7008;
+}
+
+.authForm__link {
+  width: 60%;
+  padding: 6px 12px;
+  border: none;
+  border-radius: 12px;
+  background-color: #fa7d09;
+  text-align: center;
+  text-decoration: none;
+  color: #f1efef;
+  transition: 0.2s;
+}
+
+.authForm__link:hover,
+.authForm__link:active {
+  background-color: #df7008;
+  color: #cac9c9;
+}
+
+/* Адаптивные стили */
+@media (max-width: 768px) {
+  .authForm__container {
+    width: 90%; /* Ширина увеличена на маленьких экранах */
+  }
+
+  .authForm__block {
+    gap: 1rem; /* Уменьшено расстояние между элементами */
+  }
+
+  .authForm__title {
+    font-size: 28px; /* Уменьшен размер шрифта заголовка на маленьких экранах */
+  }
+
+  .authForm__item {
+    width: 80%; /* Увеличена ширина элементов на маленьких экранах */
+  }
+
+  .authForm__input {
+    padding: 10px 12px; /* Уменьшено внутреннее заполнение инпутов на маленьких экранах */
+  }
+
+  .authForm__text {
+    top: -10px; /* Поднято текстовое поле на маленьких экранах */
+  }
+
+  .authForm__btns {
+    gap: 1rem; /* Уменьшено расстояние между кнопками на маленьких экранах */
+  }
+
+  .authForm__submit {
+    width: 80%; /* Увеличена ширина кнопки на маленьких экранах */
+  }
+
+  .authForm__link {
+    width: 80%; /* Увеличена ширина ссылки на маленьких экранах */
+  }
+}
