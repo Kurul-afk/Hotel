@@ -28,15 +28,14 @@ const AuthContextProvider = ({ children }) => {
     setLoading(true);
     try {
       const { data } = await axios(`${API}/users`, user);
-
       const findUser = data.find(
         (item) => item.email === user.email && item.password === user.password
       );
 
       if (findUser) {
         localStorage.setItem("tokkens", JSON.stringify(data));
-        localStorage.setItem("email", JSON.stringify(user.email));
-        setCurrentUser(user);
+        setCurrentUser(user.email);
+        localStorage.setItem("email", user.email);
         navigate("/");
         toast.success("you successfully login");
       } else {
@@ -52,7 +51,7 @@ const AuthContextProvider = ({ children }) => {
 
   const handleLogout = (navigate) => {
     setLoading(true);
-    localStorage.removeItem("tokens");
+    localStorage.removeItem("tokkens");
     localStorage.removeItem("email");
     setCurrentUser(null);
     navigate("/login");
@@ -61,6 +60,7 @@ const AuthContextProvider = ({ children }) => {
 
   const contextValue = {
     currentUser,
+    setCurrentUser,
     error,
     loading,
     handleRegister,

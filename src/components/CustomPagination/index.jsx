@@ -8,8 +8,21 @@ const CustomPagination = () => {
   const [searchParams, setSearchParams] = useSearchParams();
   const { pages } = useContext(roomContext);
 
+  // useEffect(() => {
+  //   const currentPageParam = searchParams.get("_page");
+  //   const page = parseInt(currentPageParam);
+
+  //   if (!isNaN(page) && page >= 1 && page <= pages) {
+  //     setCurrentPage(page);
+  //   } else {
+  //     setCurrentPage(1);
+  //     searchParams.set("_page", "1");
+  //     setSearchParams(searchParams);
+  //   }
+  // }, [searchParams, pages]);
+
   const handleChangePage = (page) => {
-    searchParams.set("_page", page);
+    searchParams.set("_page", page); // Добавьте || 1 для установки 1 по умолчанию
     setSearchParams(searchParams);
     setCurrentPage(page);
   };
