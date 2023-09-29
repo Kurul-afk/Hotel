@@ -4,6 +4,7 @@ import CustomCard from "../../components/CustomCard";
 import CustomPagination from "../../components/CustomPagination";
 import { useSearchParams } from "react-router-dom";
 import FilterByCategory from "../../components/FilterByCategory";
+import "./style.css";
 
 const AdminPage = () => {
   const { rooms, getRooms, deleteRoom } = useContext(roomContext);
@@ -14,15 +15,13 @@ const AdminPage = () => {
     setSelectedCategory(searchParams.get("category") || "");
     getRooms(searchParams.get("_page") || 1, selectedCategory);
   }, [searchParams, selectedCategory]);
-
   const onDelete = async (id) => {
     await deleteRoom(id);
     await getRooms(searchParams.get("_page"));
   };
 
-
-  useEffect(async () => {
-    await getRooms();
+  useEffect(() => {
+    getRooms();
   }, []);
 
   return (

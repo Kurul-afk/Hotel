@@ -13,8 +13,7 @@
 
 .card__container {
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  flex-wrap: wrap;
 }
 
 .card__text {
@@ -85,5 +84,6 @@
   }
 }
 .card__img {
-  width: 20%;
+  width: 100%;
+  height: 300px;
 }

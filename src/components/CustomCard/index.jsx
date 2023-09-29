@@ -2,15 +2,12 @@ import React, { useContext, useEffect, useState } from "react";
 import { roomContext } from "../../context/roomContext";
 import "./style.css";
 import { Link } from "react-router-dom";
-import StarRating from "../StarReating";
 
 const CustomCard = ({ room, isAdminStatus, onDelete }) => {
   const [liked, setLiked] = useState(false);
   const [newComment, setNewComment] = useState("");
   const [likes, setLikes] = useState(room.likes || 0);
   const [comments, setComments] = useState(room.comments || []);
-
-const CustomCard = ({ room, isAdminStatus, onDelete }) => {
   const truncatedText = (text, maxLength) => {
     if (text.length > maxLength) {
       return text.slice(0, maxLength) + "...";
@@ -43,7 +40,6 @@ const CustomCard = ({ room, isAdminStatus, onDelete }) => {
 
   return (
     <div className="card">
-      <StarRating />
       <div className="card__container">
         <img src={room.img} alt="img" className="card__img" />
         <div className="card__text">

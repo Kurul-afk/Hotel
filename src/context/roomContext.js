@@ -13,7 +13,7 @@ const INIT_STATE = {
   room: null,
 };
 
-const LIMIT = 3;
+const LIMIT = 6;
 
 function reducer(state = INIT_STATE, action) {
   switch (action.type) {

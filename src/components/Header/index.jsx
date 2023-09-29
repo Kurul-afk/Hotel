@@ -7,13 +7,7 @@ import SearchComponent from "../SearchComponent";
 const Header = () => {
   const isAdmin = localStorage.getItem("email") === "admin";
 
-
-  const isAdmin = localStorage.getItem("email") === "kamila";
-
-  const { handleLogout } = useContext(authContext);
-
   const { handleLogout, currentUser, setCurrentUser } = useContext(authContext);
-
 
   const navigate = useNavigate();
 
@@ -26,8 +20,6 @@ const Header = () => {
     console.log("Search text:", searchText);
   };
 
-  }, [currentUser]);
-
   return (
     <header>
       <div className="header__container">
@@ -36,20 +28,14 @@ const Header = () => {
             Flat Booking
           </Link>
           <Link className="header__item" to="/list-page">
-            {" "}
-            {/* Исправлена ошибка с className */}
             Rooms
           </Link>
           {isAdmin && (
             <>
               <Link className="header__item" to="/add-room">
-                {" "}
-                {/* Исправлена ошибка с className */}
                 Add room
               </Link>
               <Link className="header__item" to="/admin-page">
-                {" "}
-                {/* Исправлена ошибка с className */}
                 Admin list
               </Link>
             </>
