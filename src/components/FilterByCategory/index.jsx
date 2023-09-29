@@ -1,6 +1,7 @@
 import React, { useContext, useEffect, useState } from "react";
 import { roomContext } from "../../context/roomContext";
 import { useSearchParams } from "react-router-dom";
+import "./style.css";
 
 const FilterByCategory = ({ selectedCategory, setSelectedCategory }) => {
   const [searchParams, setSearchParams] = useSearchParams();

@@ -2,3 +2,31 @@
   width: 80%;
   margin: 0 auto;
 }
+.roomList {
+  padding: 20px;
+}
+
+.roomList h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.roomList__top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.roomList__container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.roomList input[type="text"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid black;
+  border-radius: 5px;
+}

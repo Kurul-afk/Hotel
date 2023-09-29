@@ -1,0 +1,30 @@
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 0;
+}
+
+.prev-button,
+.next-button,
+.page-number {
+  padding: 10px 15px;
+  border: 1px solid black;
+  margin: 0 5px;
+  cursor: pointer;
+  background-color: #fff;
+  color: black;
+  border-radius: 5px;
+}
+
+.prev-button:hover,
+.next-button:hover,
+.page-number:hover {
+  background-color: orange;
+  color: #fff;
+}
+
+.page-number.active {
+  background-color: black;
+  color: #fff;
+}

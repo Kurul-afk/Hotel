@@ -3,17 +3,12 @@ import { Link, useNavigate } from "react-router-dom";
 import "./style.css";
 import { authContext } from "../../context/authContext";
 import SearchComponent from "../SearchComponent";
+import "./style.css";
 
 const Header = () => {
   const isAdmin = localStorage.getItem("email") === "admin";
 
-
-  const isAdmin = localStorage.getItem("email") === "kamila";
-
-  const { handleLogout } = useContext(authContext);
-
   const { handleLogout, currentUser, setCurrentUser } = useContext(authContext);
-
 
   const navigate = useNavigate();
 
@@ -25,8 +20,6 @@ const Header = () => {
   const handleSearchChange = (searchText) => {
     console.log("Search text:", searchText);
   };
-
-  }, [currentUser]);
 
   return (
     <header>
@@ -79,5 +72,4 @@ const Header = () => {
     </header>
   );
 };
-
 export default Header;

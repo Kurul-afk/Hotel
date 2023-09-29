@@ -1,5 +1,3 @@
-/* style.css */
-
 .hotel-card {
   background-color: #fff;
   border: 1px solid #eaeaea;
@@ -51,7 +49,6 @@
   background-color: #ff7700;
 }
 
-/* Add media queries for responsiveness */
 @media (max-width: 768px) {
   .hotel-card {
     margin: 10px 0;

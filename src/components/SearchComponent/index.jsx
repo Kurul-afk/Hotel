@@ -6,7 +6,7 @@ const SearchComponent = ({ onSearch }) => {
   const handleInputChange = (event) => {
     const text = event.target.value;
     setSearchText(text);
-    onSearch(text); // Вызываем обработчик поиска и передаем текущий текст
+    onSearch(text);
   };
 
   return (

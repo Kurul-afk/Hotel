@@ -4,6 +4,7 @@ import CustomCard from "../../components/CustomCard";
 import CustomPagination from "../../components/CustomPagination";
 import { useSearchParams } from "react-router-dom";
 import FilterByCategory from "../../components/FilterByCategory";
+import "./style.css";
 
 const AdminPage = () => {
   const { rooms, getRooms, deleteRoom } = useContext(roomContext);
@@ -20,9 +21,8 @@ const AdminPage = () => {
     await getRooms(searchParams.get("_page"));
   };
 
-
-  useEffect(async () => {
-    await getRooms();
+  useEffect(() => {
+    getRooms();
   }, []);
 
   return (

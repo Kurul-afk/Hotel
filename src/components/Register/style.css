@@ -1,6 +1,9 @@
 .authForm__container {
   width: 60%;
-  margin: auto;
+  margin-bottom: 100px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .authForm__block {
@@ -77,43 +80,4 @@
 .authForm__link:active {
   background-color: #df7008;
   color: #cac9c9;
-}
-
-/* Адаптивные стили */
-@media (max-width: 768px) {
-  .authForm__container {
-    width: 90%; /* Ширина увеличена на маленьких экранах */
-  }
-
-  .authForm__block {
-    gap: 1rem; /* Уменьшено расстояние между элементами */
-  }
-
-  .authForm__title {
-    font-size: 28px; /* Уменьшен размер шрифта заголовка на маленьких экранах */
-  }
-
-  .authForm__item {
-    width: 80%; /* Увеличена ширина элементов на маленьких экранах */
-  }
-
-  .authForm__input {
-    padding: 10px 12px; /* Уменьшено внутреннее заполнение инпутов на маленьких экранах */
-  }
-
-  .authForm__text {
-    top: -10px; /* Поднято текстовое поле на маленьких экранах */
-  }
-
-  .authForm__btns {
-    gap: 1rem; /* Уменьшено расстояние между кнопками на маленьких экранах */
-  }
-
-  .authForm__submit {
-    width: 80%; /* Увеличена ширина кнопки на маленьких экранах */
-  }
-
-  .authForm__link {
-    width: 80%; /* Увеличена ширина ссылки на маленьких экранах */
-  }
 }

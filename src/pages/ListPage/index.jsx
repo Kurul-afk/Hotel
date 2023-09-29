@@ -10,15 +10,27 @@ import FilterByCategory from "../../components/FilterByCategory";
 const ListPage = () => {
   const { rooms, getRooms } = useContext(roomContext);
   const [searchText, setSearchText] = useState("");
+  const [searchParams, setSearchParams] = useSearchParams();
+  const [selectedCategory, setSelectedCategory] = useState("");
 
-  useEffect(async () => {
-    await getRooms();
+  useEffect(() => {
+    getRooms(searchParams.get("_page") || 1, selectedCategory);
+  }, [searchParams, selectedCategory]);
+
+  useEffect(() => {
+    getRooms();
   }, []);
 
   return (
     <>
       <h2>List of Hotel</h2>
       <div className="roomList">
+        <div className="roomList__top">
+          <FilterByCategory
+            selectedCategory={selectedCategory}
+            setSelectedCategory={setSelectedCategory}
+          />
+        </div>
         <input
           type="text"
           placeholder="Search..."
@@ -34,30 +46,9 @@ const ListPage = () => {
               <CustomCard room={item} key={item.id} />
             ))}
         </div>
+        <CustomPagination />
       </div>
     </>
-
-  const [searchParams, setSearchParams] = useSearchParams();
-  const [selectedCategory, setSelectedCategory] = useState("");
-
-  useEffect(() => {
-    setSelectedCategory(searchParams.get("category") || "");
-    getRooms(searchParams.get("_page") || 1, selectedCategory);
-  }, [searchParams, selectedCategory]);
-
-  return (
-    <div className="roomList">
-      <div className="roomList__top">
-        <FilterByCategory
-          selectedCategory={selectedCategory}
-          setSelectedCategory={setSelectedCategory}
-        />
-      </div>
-      <div className="roomList__container">
-        {rooms && rooms.map((item) => <CustomCard room={item} />)}
-      </div>
-      <CustomPagination />
-    </div>
   );
 };
 

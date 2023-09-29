@@ -1,0 +1,16 @@
+.filter-category {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  background-color: #fff;
+  color: #333;
+  width: 100%;
+  max-width: 200px;
+}
+
+.filter-category option {
+  font-size: 16px;
+  background-color: #fff;
+  color: #333;
+}

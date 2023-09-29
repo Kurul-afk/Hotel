@@ -1,6 +1,7 @@
 .addRoom_Form__container {
   width: 60%;
   margin: auto;
+  margin-bottom: 100px;
 }
 .addRoom_Form__block {
   display: flex;
