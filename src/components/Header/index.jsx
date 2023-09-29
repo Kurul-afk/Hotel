@@ -43,7 +43,6 @@ const Header = () => {
           )}
         </div>
         <div className="header__right">
-          <SearchComponent onSearch={handleSearchChange} />
           {!currentUser ? (
             <Link className="header__item" to={"/register"}>
               Register

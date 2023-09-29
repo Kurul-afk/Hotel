@@ -33,7 +33,6 @@ const AuthContextProvider = ({ children }) => {
       );
 
       if (findUser) {
-        localStorage.setItem("tokkens", JSON.stringify(data));
         setCurrentUser(user.email);
         localStorage.setItem("email", user.email);
         navigate("/");
@@ -51,7 +50,6 @@ const AuthContextProvider = ({ children }) => {
 
   const handleLogout = (navigate) => {
     setLoading(true);
-    localStorage.removeItem("tokkens");
     localStorage.removeItem("email");
     setCurrentUser(null);
     navigate("/login");

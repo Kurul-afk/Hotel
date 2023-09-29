@@ -61,6 +61,14 @@
       "img": "https://i.pinimg.com/474x/17/f3/e0/17f3e0543584e532fbc9fcd47e521dd0.jpg",
       "category": "5",
       "id": 5
+    },
+    {
+      "title": "Lorem ipsum",
+      "desc": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laboriosam accusantium et illum aperiam? Officiis illum quia libero sunt accusamus, incidunt provident itaque praesentium! Sit provident eos possimus ratione corrupti natus voluptatum harum consectetur inventore dolorum odit fugit, iste nulla quos aspernatur assumenda quaerat incidunt laborum obcaecati voluptate impedit praesentium. Similique dolor quos tempora. Recusandae veniam sit officiis corrupti iure molestiae dolores eveniet exercitationem perspiciatis vel impedit, cupiditate quasi dolorum vitae inventore beatae corporis laudantium commodi!",
+      "price": "255",
+      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQVRJSe2cT3yYVH6_GAxg9LbAyjOrmhferuMQ&usqp=CAU",
+      "category": "4",
+      "id": 6
     }
   ],
   "users": [
@@ -111,6 +119,18 @@
       "password": "qwerty",
       "confirm_password": "qwerty",
       "id": 8
+    },
+    {
+      "email": "frgthyju",
+      "password": "defrgthyj",
+      "confirm_password": "defrgthyj",
+      "id": 9
+    },
+    {
+      "email": "arsen23",
+      "password": "2323",
+      "confirm_password": "2323",
+      "id": 10
     }
   ],
   "favorite": [],
