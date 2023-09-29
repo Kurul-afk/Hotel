@@ -1,6 +1,10 @@
 {
   "categories": [
     {
+      "category": "1 Star",
+      "id": 1
+    },
+    {
       "category": "2 Star",
       "id": 2
     },
@@ -55,7 +59,7 @@
       "desc": "Enjoy a spacious and comfortable family suite for a memorable family vacation.",
       "price": "$2,800",
       "img": "https://i.pinimg.com/474x/17/f3/e0/17f3e0543584e532fbc9fcd47e521dd0.jpg",
-      "category": "4",
+      "category": "5",
       "id": 5
     }
   ],

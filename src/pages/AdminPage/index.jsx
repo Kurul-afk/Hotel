@@ -15,7 +15,6 @@ const AdminPage = () => {
     setSelectedCategory(searchParams.get("category") || "");
     getRooms(searchParams.get("_page") || 1, selectedCategory);
   }, [searchParams, selectedCategory]);
-
   const onDelete = async (id) => {
     await deleteRoom(id);
     await getRooms(searchParams.get("_page"));

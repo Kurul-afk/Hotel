@@ -29,20 +29,14 @@ const Header = () => {
             Flat Booking
           </Link>
           <Link className="header__item" to="/list-page">
-            {" "}
-            {/* Исправлена ошибка с className */}
             Rooms
           </Link>
           {isAdmin && (
             <>
               <Link className="header__item" to="/add-room">
-                {" "}
-                {/* Исправлена ошибка с className */}
                 Add room
               </Link>
               <Link className="header__item" to="/admin-page">
-                {" "}
-                {/* Исправлена ошибка с className */}
                 Admin list
               </Link>
             </>

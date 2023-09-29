@@ -1,7 +1,6 @@
 import React, { useContext, useEffect, useState } from "react";
 import { roomContext } from "../../context/roomContext";
 import CustomCard from "../../components/CustomCard";
-import Header from "../../components/Header";
 import "./style.css";
 import CustomPagination from "../../components/CustomPagination";
 import { useSearchParams } from "react-router-dom";
@@ -18,9 +17,9 @@ const ListPage = () => {
   }, [searchParams, selectedCategory]);
 
   useEffect(() => {
-    getRooms();
-  }, []);
-
+    setSelectedCategory(searchParams.get("category") || "");
+    getRooms(searchParams.get("_page") || 1, selectedCategory);
+  }, [searchParams, selectedCategory]);
   return (
     <>
       <h2>List of Hotel</h2>
@@ -51,5 +50,4 @@ const ListPage = () => {
     </>
   );
 };
-
 export default ListPage;

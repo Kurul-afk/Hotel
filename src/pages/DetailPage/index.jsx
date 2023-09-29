@@ -1,6 +1,8 @@
 import React, { useContext, useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { roomContext } from "../../context/roomContext";
+import { toast } from "react-toastify";
+import "./style.css";
 
 const DetailPage = () => {
   const { id } = useParams();
@@ -29,7 +31,7 @@ const DetailPage = () => {
             <button className="detail__btn" onClick={handleBookClick}>
               To book
             </button>
-            {isBooked && <p>You have booked!</p>}
+            {isBooked && toast.success("you booked")}
           </div>
         </div>
       </div>
